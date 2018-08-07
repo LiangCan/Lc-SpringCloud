@@ -14,10 +14,7 @@ eureka:
    instance:
       instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
 
-
-        
 management:
   endpoints:
     web:
-      exposure:
-        include=bus-refresh
+      exposure: include=bus-refresh
