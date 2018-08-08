@@ -26,7 +26,7 @@ management:
 #公开所有的端点
 #"https://xx:xx/bus-refresh" bus 刷新路径,
 #"https://xx:xx/actuator/hystrix.stream" 监控数据,
-#"https://xx:xx/actuator/hystrix" 监控数据仪表盘页面,
+#"https://xx:xx/hystrix" 监控数据仪表盘页面,
 
 feign:
   hystrix:
