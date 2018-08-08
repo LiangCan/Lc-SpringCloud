@@ -14,12 +14,20 @@ eureka:
    instance:
       instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}} #在eureka 页面显示的 server
 
+
 management:
   endpoints:
     web:
-      exposure: 
-        include: bus-refresh #你可以公开所有的端点，把这个端点公开出来  bus 刷新路径
-        
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+#公开所有的端点
+#"https://xx:xx/bus-refresh" bus 刷新路径,
+#"https://xx:xx/actuator/hystrix.stream" 监控数据,
+#"https://xx:xx/actuator/hystrix" 监控数据仪表盘页面,
+
 feign:
   hystrix:
     enabled: true #打开熔断器
