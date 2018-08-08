@@ -24,9 +24,9 @@ management:
         allowed-origins: "*"
         allowed-methods: "*"
 #公开所有的端点
-#"https://xx:xx/bus-refresh" bus 刷新路径,
-#"https://xx:xx/actuator/hystrix.stream" 监控数据,
-#"https://xx:xx/hystrix" 监控数据仪表盘页面,
+#"http://xx:xx/bus-refresh" bus 刷新路径,
+#"http://xx:xx/actuator/hystrix.stream" 监控数据,
+#"http://xx:xx/hystrix" 监控数据仪表盘页面,
 
 feign:
   hystrix:
