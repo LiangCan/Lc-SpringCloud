@@ -6,16 +6,20 @@ spring:
     password: 123456
   cloud:
     bus:
-      enabled: true
+      enabled: true   #开启bus
       trace:
         enabled: true
  
 eureka:
    instance:
-      instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}}
+      instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${spring.application.instance_id:${server.port}} #在eureka 页面显示的 server
 
 management:
   endpoints:
     web:
       exposure: 
-        include: bus-refresh
+        include: bus-refresh #你可以公开所有的端点，把这个端点公开出来  bus 刷新路径
+        
+feign:
+  hystrix:
+    enabled: true #打开熔断器
