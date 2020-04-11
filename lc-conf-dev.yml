@@ -1,14 +1,14 @@
-spring:
-  rabbitmq: 
-    host: 172.19.2.122
-    port: 5672
-    username: admin
-    password: 123456
-  cloud:
-    bus:
-      enabled: false #关闭bus
-      trace:
-        enabled: true
+#spring:
+#  rabbitmq: 
+#    host: 172.19.2.122
+#    port: 5672
+#    username: admin
+#    password: 123456
+#  cloud:
+#    bus:
+#      enabled: false #关闭bus
+#      trace:
+#        enabled: false
  
 eureka:
    instance:
